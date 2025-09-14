@@ -14,10 +14,9 @@
         "@codeceptjs/configure": "^1.0.4",
         "@codeceptjs/examples": "^1.2.4", 
         "@types/node": "^22.15.29",
-        "codeceptjs": "3.7.3",
-        "playwright": "^1.52.0",
+        "codeceptjs": "3.7.4",
         "ts-node": "^10.9.2",
         "typescript": "^5.8.3",
-        "webdriverio": "8.44.1"
+        "webdriverio": "9.15.0"
     }
 }

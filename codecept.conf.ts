@@ -7,15 +7,15 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  tests: './*test.ts',
+  tests: './test.ts',
   output: './output',
   helpers: {
     WebDriver: {
       url: 'https://github.com',
       host: 'localhost',
       port: 4444,
-      path: '/wd/hub',
       browser: 'chrome',
+      restart: false, // setting this to false is causing the issue when exececuting inside a docker container
       desiredCapabilities:{
         'goog:chromeOptions': {
           args: [
@@ -24,7 +24,8 @@ export const config: CodeceptJS.MainConfig = {
             '--disable-dev-shm-usage',
           ]
         }
-      }
+      },
+      // bidiProtocol: true
     }
     // settings to run locally 
     // WebDriver: {
